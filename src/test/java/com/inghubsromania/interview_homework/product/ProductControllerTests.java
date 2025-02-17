@@ -15,11 +15,11 @@ public class ProductControllerTests {
     private TestRestTemplate restTemplate;
 
     @Test
-    public void shouldReturnStringContainingTheGivenProductId() {
+    public void shouldReturnOneProductHavingTheGivenProductId() {
         long productId = 1L;
         String getProductUrl = "/product/" + productId;
-        String getProductResponseBody = "product: " + productId;
-        ResponseEntity<String> response = restTemplate.getForEntity(getProductUrl, String.class);
+        Product getProductResponseBody = Products.all.get(productId);
+        ResponseEntity<Product> response = restTemplate.getForEntity(getProductUrl, Product.class);
         assertThat(response.getBody()).isEqualTo(getProductResponseBody);
 
     }
