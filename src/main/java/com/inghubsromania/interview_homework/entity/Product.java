@@ -1,4 +1,4 @@
-package com.inghubsromania.interview_homework.product;
+package com.inghubsromania.interview_homework.entity;
 
 public class Product {
     private long id;

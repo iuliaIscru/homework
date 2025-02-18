@@ -1,9 +1,13 @@
 package com.inghubsromania.interview_homework.product;
 
+import com.inghubsromania.interview_homework.entity.Product;
+import com.inghubsromania.interview_homework.exception.ProductNotFoundException;
+import com.inghubsromania.interview_homework.repository.Products;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -22,5 +26,15 @@ public class ProductControllerTests {
         ResponseEntity<Product> response = restTemplate.getForEntity(getProductUrl, Product.class);
         assertThat(response.getBody()).isEqualTo(getProductResponseBody);
 
+    }
+
+    @Test
+    public void shouldThrowExceptionWhenProductNotFound() throws ProductNotFoundException {
+        long productId = 10L;
+
+        String getProductUrl = "/product/" + productId;
+        ResponseEntity<String> response = restTemplate.getForEntity(getProductUrl, String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+        assertThat(response.getBody()).isEqualTo(new ProductNotFoundException(productId).getMessage());
     }
 }

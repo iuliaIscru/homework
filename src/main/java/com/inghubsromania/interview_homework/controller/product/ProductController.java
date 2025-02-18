@@ -1,5 +1,8 @@
-package com.inghubsromania.interview_homework.product;
+package com.inghubsromania.interview_homework.controller.product;
 
+import com.inghubsromania.interview_homework.entity.Product;
+import com.inghubsromania.interview_homework.exception.ProductNotFoundException;
+import com.inghubsromania.interview_homework.repository.Products;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +15,7 @@ import java.util.List;
 public class ProductController {
     @GetMapping("/{productId}")
     public Product one(@PathVariable long productId) {
-        return Products.one(productId);
+        return Products.one(productId).orElseThrow(() -> new ProductNotFoundException(productId));
     }
 
     @GetMapping("/all")
