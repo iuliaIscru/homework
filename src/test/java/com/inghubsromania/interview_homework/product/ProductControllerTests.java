@@ -23,7 +23,7 @@ public class ProductControllerTests {
         long productId = 1L;
         String getProductUrl = "/product/" + productId;
         Product getProductResponseBody = Products.all.get(productId);
-        ResponseEntity<Product> response = restTemplate.getForEntity(getProductUrl, Product.class);
+        ResponseEntity<Product> response = restTemplate.withBasicAuth("usr01", "test01").getForEntity(getProductUrl, Product.class);
         assertThat(response.getBody()).isEqualTo(getProductResponseBody);
 
     }
@@ -33,7 +33,7 @@ public class ProductControllerTests {
         long productId = 10L;
 
         String getProductUrl = "/product/" + productId;
-        ResponseEntity<String> response = restTemplate.getForEntity(getProductUrl, String.class);
+        ResponseEntity<String> response = restTemplate.withBasicAuth("usr01", "test01").getForEntity(getProductUrl, String.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
         assertThat(response.getBody()).isEqualTo(new ProductNotFoundException(productId).getMessage());
     }

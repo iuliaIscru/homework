@@ -5,8 +5,7 @@ public class Product {
     private String name;
     private double price;
 
-    public Product(long id, String name, double price) {
-        this.id = id;
+    public Product(String name, double price) {
         this.name = name;
         this.price = price;
     }
@@ -29,6 +28,10 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     @Override
