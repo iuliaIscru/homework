@@ -19,10 +19,9 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeHttpRequests(requests -> requests
-                        .requestMatchers("/home").permitAll()
+                        .requestMatchers("/home").authenticated()
                         .requestMatchers("/product/**").hasRole("MANAGE_PRODUCT")
-                        .anyRequest()
-                        .authenticated()
+                        .anyRequest().authenticated()
                 )
                 .httpBasic(Customizer.withDefaults())
                 .csrf(AbstractHttpConfigurer::disable)

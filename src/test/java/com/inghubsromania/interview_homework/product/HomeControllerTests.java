@@ -15,7 +15,7 @@ public class HomeControllerTests {
 
     @Test
     public void home() {
-        ResponseEntity<String> response = restTemplate.getForEntity("/home", String.class);
+        ResponseEntity<String> response = restTemplate.withBasicAuth("usr02", "test02").getForEntity("/home", String.class);
         assertThat(response.getBody()).isEqualTo("hello :)");
     }
 }
