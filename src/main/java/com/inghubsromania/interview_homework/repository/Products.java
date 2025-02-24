@@ -36,7 +36,7 @@ public class Products {
     }
 
     public static Product changePrice(long id, double price) {
-        log.info("Update product {}" + "price: {}", id, price);
+        log.info("Update product {} " + "price: {}", id, price);
         Product product = all.get(id);
         product.setPrice(price);
         return product;
