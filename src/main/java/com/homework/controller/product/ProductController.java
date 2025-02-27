@@ -1,8 +1,8 @@
-package com.inghubsromania.interview_homework.controller.product;
+package com.homework.controller.product;
 
-import com.inghubsromania.interview_homework.entity.Product;
-import com.inghubsromania.interview_homework.exception.ProductNotFoundException;
-import com.inghubsromania.interview_homework.repository.Products;
+import com.homework.entity.Product;
+import com.homework.exception.ProductNotFoundException;
+import com.homework.repository.Products;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 

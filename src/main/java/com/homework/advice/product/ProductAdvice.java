@@ -1,6 +1,6 @@
-package com.inghubsromania.interview_homework.advice.product;
+package com.homework.advice.product;
 
-import com.inghubsromania.interview_homework.exception.ProductNotFoundException;
+import com.homework.exception.ProductNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;

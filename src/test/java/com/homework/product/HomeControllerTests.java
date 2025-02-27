@@ -1,4 +1,4 @@
-package com.inghubsromania.interview_homework.product;
+package com.homework.product;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

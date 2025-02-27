@@ -1,8 +1,8 @@
-package com.inghubsromania.interview_homework.product;
+package com.homework.product;
 
-import com.inghubsromania.interview_homework.entity.Product;
-import com.inghubsromania.interview_homework.exception.ProductNotFoundException;
-import com.inghubsromania.interview_homework.repository.Products;
+import com.homework.entity.Product;
+import com.homework.exception.ProductNotFoundException;
+import com.homework.repository.Products;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

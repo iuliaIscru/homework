@@ -1,6 +1,6 @@
-package com.inghubsromania.interview_homework.repository;
+package com.homework.repository;
 
-import com.inghubsromania.interview_homework.entity.Product;
+import com.homework.entity.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

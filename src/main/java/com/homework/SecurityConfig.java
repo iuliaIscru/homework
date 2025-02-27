@@ -1,4 +1,4 @@
-package com.inghubsromania.interview_homework;
+package com.homework;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.inghubsromania.interview_homework.controller.home;
+package com.homework.controller.home;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

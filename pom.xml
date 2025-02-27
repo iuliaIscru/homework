@@ -8,11 +8,11 @@
 		<version>3.4.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.inghubsromania</groupId>
-	<artifactId>interview-homework</artifactId>
+	<groupId>com</groupId>
+	<artifactId>homework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>interview-homework</name>
-	<description>First Step of the interview at ING Hubs Romania</description>
+	<name>homework</name>
+	<description>Springboot application</description>
 	<url/>
 	<licenses>
 		<license/>

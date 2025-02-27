@@ -1,4 +1,4 @@
-package com.inghubsromania.interview_homework.exception;
+package com.homework.exception;
 
 public class ProductNotFoundException extends RuntimeException {
 
